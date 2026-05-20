@@ -99,7 +99,7 @@ export default function Home() {
         <p className="text-xs font-bold uppercase tracking-widest mb-6" style={{ color: "rgba(255,255,255,0.25)" }}>
           Qui suis-je
         </p>
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-12 items-stretch">
           <div>
             <p className="text-lg leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>
               Ingénieur généraliste diplômé de l&apos;<strong className="text-white">ECE Paris</strong> (Majeure Product Engineering &amp; Innovation), je suis un profil <strong className="text-white">hybride technique et coordination</strong> : capable de concevoir, développer et piloter des projets de bout en bout.
@@ -108,10 +108,10 @@ export default function Home() {
               Je combine les <strong className="text-white">compétences techniques d&apos;un développeur</strong> : code, architecture, outils, avec l&apos;<strong className="text-white">esprit d&apos;un entrepreneur</strong>, vision produit, sens des priorités et capacité à créer des choses de zéro.
             </p>
             <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Ce profil polyvalent me permet d&apos;être aussi à l&apos;aise dans une équipe technique que dans une salle de réunion — et de faire le lien entre les deux.
+              Ce profil polyvalent me permet d&apos;être aussi à l&apos;aise dans une équipe technique que dans une salle de réunion, et de faire le lien entre les deux.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 content-between">
             {[
               { icon: "🌍", label: "Langues", value: "FR · EN · ES" },
               { icon: "✈️", label: "Mobilité", value: "Barcelona, Bulgarie" },
