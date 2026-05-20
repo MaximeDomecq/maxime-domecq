@@ -17,6 +17,13 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className="relative overflow-hidden flex flex-col justify-center min-h-screen px-6 md:px-16 lg:px-24">
 
+        {/* Animated background orbs */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="hero-orb-1 absolute top-1/4 left-1/5 w-[500px] h-[500px] rounded-full" style={{ background: "radial-gradient(circle, #6366f1, transparent 70%)" }} />
+          <div className="hero-orb-2 absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full" style={{ background: "radial-gradient(circle, #0ea5e9, transparent 70%)" }} />
+          <div className="hero-orb-3 absolute top-1/2 right-1/3 w-[300px] h-[300px] rounded-full" style={{ background: "radial-gradient(circle, #8b5cf6, transparent 70%)" }} />
+        </div>
+
         <div className="relative max-w-5xl flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Photo */}
           <div className="flex-shrink-0">
@@ -45,11 +52,18 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap gap-3">
             <a
-              href="mailto:maxime.domecq@outlook.fr"
-              className="px-6 py-3 rounded-xl font-black text-sm transition-all hover:scale-105 active:scale-95"
+              href="mailto:maxime.domecq@outlook.fr?subject=Prise de contact&body=Bonjour Maxime,"
+              className="px-6 py-3 rounded-xl font-black text-sm transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
               style={{ background: "#6366f1", color: "white", boxShadow: "0 0 24px rgba(99,102,241,0.35)" }}
             >
-              Me contacter
+              ✉️ Me contacter
+            </a>
+            <a
+              href="tel:+33615776414"
+              className="px-6 py-3 rounded-xl font-black text-sm transition-all hover:opacity-80 flex items-center gap-2"
+              style={{ background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.8)", border: "1px solid rgba(255,255,255,0.1)" }}
+            >
+              📞 06 15 77 64 14
             </a>
             <a
               href="#parcours"
