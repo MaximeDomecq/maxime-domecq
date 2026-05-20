@@ -102,16 +102,16 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <p className="text-lg leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Ingénieur généraliste diplômé de l&apos;<strong className="text-white">ECE Paris</strong> (Majeure Product Engineering &amp; Innovation), je suis un profil <strong className="text-white">hybride technique et coordination</strong> — capable de concevoir, développer et piloter des projets de bout en bout.
+              Ingénieur généraliste diplômé de l&apos;<strong className="text-white">ECE Paris</strong> (Majeure Product Engineering &amp; Innovation), je suis un profil <strong className="text-white">hybride technique et coordination</strong> : capable de concevoir, développer et piloter des projets de bout en bout.
             </p>
             <p className="text-lg leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Je combine les <strong className="text-white">compétences techniques d&apos;un développeur</strong> — code, architecture, outils — avec l&apos;<strong className="text-white">esprit d&apos;un entrepreneur</strong> : vision produit, sens des priorités et capacité à créer des choses de zéro.
+              Je combine les <strong className="text-white">compétences techniques d&apos;un développeur</strong> : code, architecture, outils, avec l&apos;<strong className="text-white">esprit d&apos;un entrepreneur</strong>, vision produit, sens des priorités et capacité à créer des choses de zéro.
             </p>
             <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
               Ce profil polyvalent me permet d&apos;être aussi à l&apos;aise dans une équipe technique que dans une salle de réunion — et de faire le lien entre les deux.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-4">
             {[
               { icon: "🌍", label: "Langues", value: "FR · EN · ES" },
               { icon: "✈️", label: "Mobilité", value: "Barcelona, Bulgarie" },
@@ -120,9 +120,9 @@ export default function Home() {
               { icon: "🏫", label: "Tutorat", value: "Professeur de maths" },
               { icon: "🚀", label: "Entrepreneur", value: "Station F, PEPITE" },
             ].map(({ icon, label, value }) => (
-              <div key={label} className="rounded-2xl p-4" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
-                <div className="text-xl mb-1">{icon}</div>
-                <div className="text-xs font-bold uppercase tracking-wider mb-0.5" style={{ color: "rgba(255,255,255,0.3)" }}>{label}</div>
+              <div key={label} className="rounded-2xl p-6 flex flex-col justify-center" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+                <div className="text-2xl mb-2">{icon}</div>
+                <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "rgba(255,255,255,0.3)" }}>{label}</div>
                 <div className="text-sm font-semibold text-white">{value}</div>
               </div>
             ))}
