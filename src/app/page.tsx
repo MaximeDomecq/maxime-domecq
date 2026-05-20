@@ -34,7 +34,7 @@ export default function Home() {
             <span style={{ color: "#6366f1" }}>Domecq</span>
           </h1>
           <p className="text-lg md:text-xl font-medium max-w-xl mb-8" style={{ color: "rgba(255,255,255,0.55)" }}>
-            Ingénieur, entrepreneur, coordinateur IT.
+            Ingénieur, Développeur, coordinateur de projets IT / AI.
           </p>
           <div className="flex flex-wrap gap-3 mb-12">
             {["ECE Paris", "Softel Communications", "Copratik"].map((tag) => (
