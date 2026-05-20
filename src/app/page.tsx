@@ -5,6 +5,7 @@ import { experiences, projects } from "@/data/experiences";
 import type { Experience } from "@/data/experiences";
 import ExperiencePanel from "@/components/ExperiencePanel";
 import HeroBubbles from "@/components/HeroBubbles";
+import NavBar from "@/components/NavBar";
 
 const TYPE_LABEL = { cdi: "CDI", stage: "Stage", startup: "Startup", alternance: "Alternance" };
 
@@ -13,10 +14,11 @@ export default function Home() {
 
   return (
     <div style={{ background: "#0a0a0f", minHeight: "100vh", color: "#e2e8f0" }}>
+      <NavBar />
       <ExperiencePanel experience={selected} onClose={() => setSelected(null)} />
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden flex flex-col justify-center min-h-screen px-6 md:px-16 lg:px-24">
+      <section id="presentation" className="relative overflow-hidden flex flex-col justify-center min-h-screen px-6 md:px-16 lg:px-24 pt-14">
 
         {/* Bubble physics background */}
         <div className="absolute inset-0 pointer-events-none">
@@ -204,7 +206,7 @@ export default function Home() {
       </section>
 
       {/* ── PROJETS ── */}
-      <section className="px-6 md:px-16 lg:px-24 py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+      <section id="projets" className="px-6 md:px-16 lg:px-24 py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "rgba(255,255,255,0.25)" }}>
             Réalisations
@@ -253,7 +255,7 @@ export default function Home() {
       </section>
 
       {/* ── COMPÉTENCES ── */}
-      <section className="px-6 md:px-16 lg:px-24 py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+      <section id="competences" className="px-6 md:px-16 lg:px-24 py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "rgba(255,255,255,0.25)" }}>
             Savoir-faire
@@ -305,7 +307,7 @@ export default function Home() {
       </section>
 
       {/* ── FORMATION ── */}
-      <section className="px-6 md:px-16 lg:px-24 py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+      <section id="formation" className="px-6 md:px-16 lg:px-24 py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "rgba(255,255,255,0.25)" }}>
             Études
@@ -337,7 +339,7 @@ export default function Home() {
       </section>
 
       {/* ── CONTACT ── */}
-      <section className="px-6 md:px-16 lg:px-24 py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+      <section id="contact" className="px-6 md:px-16 lg:px-24 py-24" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "rgba(255,255,255,0.25)" }}>
             Contact
