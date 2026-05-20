@@ -45,10 +45,21 @@ export default function Home() {
             Ingénieur, Développeur, Entrepreneur, coordinateur de projets IT / AI.
           </p>
           <div className="flex flex-wrap gap-3 mb-12">
-            {["ECE Paris", "Softel Communications", "Copratik"].map((tag) => (
-              <span key={tag} className="text-xs font-semibold px-3 py-1.5 rounded-full" style={{ background: "rgba(99,102,241,0.15)", color: "#a5b4fc", border: "1px solid rgba(99,102,241,0.25)" }}>
-                {tag}
-              </span>
+            {[
+              { label: "ECE Paris", href: "https://www.ece.fr" },
+              { label: "Softel Communications", href: "https://softel.com/fr/" },
+              { label: "Copratik", href: "https://copratik.fr" },
+            ].map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-semibold px-3 py-1.5 rounded-full transition-all hover:opacity-70"
+                style={{ background: "rgba(99,102,241,0.15)", color: "#a5b4fc", border: "1px solid rgba(99,102,241,0.25)" }}
+              >
+                {label}
+              </a>
             ))}
           </div>
           <div className="flex flex-wrap gap-3">
