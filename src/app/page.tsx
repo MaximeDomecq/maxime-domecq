@@ -22,7 +22,15 @@ export default function Home() {
           <div className="absolute bottom-1/4 right-1/3 w-80 h-80 rounded-full opacity-8" style={{ background: "radial-gradient(circle, #0ea5e9, transparent)" }} />
         </div>
 
-        <div className="relative max-w-4xl">
+        <div className="relative max-w-5xl flex flex-col md:flex-row items-center md:items-start gap-10">
+          {/* Photo */}
+          <div className="flex-shrink-0">
+            <div className="w-32 h-32 md:w-44 md:h-44 rounded-3xl overflow-hidden" style={{ border: "2px solid rgba(99,102,241,0.3)", boxShadow: "0 0 40px rgba(99,102,241,0.2)" }}>
+              <img src="/photo.jpg" alt="Maxime Domecq" className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <div className="flex-1">
           <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: "#6366f1" }}>
             Bonjour, je suis
           </p>
@@ -40,7 +48,7 @@ export default function Home() {
               </span>
             ))}
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-3">
             <a
               href="mailto:maxime.domecq@outlook.fr"
               className="px-6 py-3 rounded-xl font-black text-sm transition-all hover:scale-105 active:scale-95"
@@ -55,6 +63,17 @@ export default function Home() {
             >
               Voir mon parcours ↓
             </a>
+            <a
+              href="https://www.linkedin.com/in/maximedomecq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl font-black text-sm transition-all hover:opacity-80 flex items-center gap-2"
+              style={{ background: "rgba(10,102,194,0.2)", color: "#60a5fa", border: "1px solid rgba(10,102,194,0.35)" }}
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
           </div>
         </div>
 
@@ -316,7 +335,7 @@ export default function Home() {
           <p className="text-base mb-10" style={{ color: "rgba(255,255,255,0.45)" }}>
             Ouvert aux opportunités, collaborations et échanges.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
             <a
               href="mailto:maxime.domecq@outlook.fr"
               className="px-8 py-3.5 rounded-xl font-black text-sm transition-all hover:scale-105 active:scale-95"
@@ -330,6 +349,16 @@ export default function Home() {
               style={{ background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.8)", border: "1px solid rgba(255,255,255,0.1)" }}
             >
               📞 06 15 77 64 14
+            </a>
+            <a
+              href="https://www.linkedin.com/in/maximedomecq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3.5 rounded-xl font-black text-sm transition-all hover:opacity-80 flex items-center justify-center gap-2"
+              style={{ background: "rgba(10,102,194,0.2)", color: "#60a5fa", border: "1px solid rgba(10,102,194,0.35)" }}
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
             </a>
           </div>
         </div>
