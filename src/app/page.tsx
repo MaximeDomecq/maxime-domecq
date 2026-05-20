@@ -16,11 +16,6 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative overflow-hidden flex flex-col justify-center min-h-screen px-6 md:px-16 lg:px-24">
-        {/* Background glow */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full opacity-10" style={{ background: "radial-gradient(circle, #6366f1, transparent)" }} />
-          <div className="absolute bottom-1/4 right-1/3 w-80 h-80 rounded-full opacity-8" style={{ background: "radial-gradient(circle, #0ea5e9, transparent)" }} />
-        </div>
 
         <div className="relative max-w-5xl flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Photo */}
@@ -39,10 +34,10 @@ export default function Home() {
             <span style={{ color: "#6366f1" }}>Domecq</span>
           </h1>
           <p className="text-lg md:text-xl font-medium max-w-xl mb-8" style={{ color: "rgba(255,255,255,0.55)" }}>
-            Développeur & Coordinateur IT — je construis des produits, pilote des projets et crée des entreprises.
+            Ingénieur, entrepreneur, coordinateur IT.
           </p>
           <div className="flex flex-wrap gap-3 mb-12">
-            {["ECE Paris", "Softel Communications", "Stellantis", "Copratik"].map((tag) => (
+            {["ECE Paris", "Softel Communications", "Copratik"].map((tag) => (
               <span key={tag} className="text-xs font-semibold px-3 py-1.5 rounded-full" style={{ background: "rgba(99,102,241,0.15)", color: "#a5b4fc", border: "1px solid rgba(99,102,241,0.25)" }}>
                 {tag}
               </span>
