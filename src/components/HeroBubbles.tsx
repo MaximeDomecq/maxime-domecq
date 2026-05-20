@@ -28,7 +28,7 @@ export default function HeroBubbles() {
     resize();
     window.addEventListener("resize", resize);
 
-    const bubbles: Bubble[] = Array.from({ length: 18 }, () => ({
+    const bubbles: Bubble[] = Array.from({ length: 8 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       vx: (Math.random() - 0.5) * 0.35,

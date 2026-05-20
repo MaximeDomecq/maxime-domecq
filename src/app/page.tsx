@@ -100,10 +100,13 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <p className="text-lg leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Diplômé de l&apos;<strong className="text-white">ECE Paris</strong> (Majeure Product Engineering & Innovation), j&apos;ai construit un profil hybride entre la <strong className="text-white">technique</strong> et la <strong className="text-white">coordination</strong>.
+              Ingénieur généraliste diplômé de l&apos;<strong className="text-white">ECE Paris</strong> (Majeure Product Engineering &amp; Innovation), je suis un profil <strong className="text-white">hybride technique et coordination</strong> — capable de concevoir, développer et piloter des projets de bout en bout.
+            </p>
+            <p className="text-lg leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>
+              Je combine les <strong className="text-white">compétences techniques d&apos;un développeur</strong> — code, architecture, outils — avec l&apos;<strong className="text-white">esprit d&apos;un entrepreneur</strong> : vision produit, sens des priorités et capacité à créer des choses de zéro.
             </p>
             <p className="text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
-              J&apos;ai créé <strong className="text-white">Copratik</strong>, une start-up à impact positif soutenue par Station F, et je pilote aujourd&apos;hui des projets IT pour des clients comme <strong className="text-white">Stellantis</strong> et <strong className="text-white">Henry Schein</strong> chez Softel Communications.
+              Ce profil polyvalent me permet d&apos;être aussi à l&apos;aise dans une équipe technique que dans une salle de réunion — et de faire le lien entre les deux.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-3">
