@@ -4,6 +4,7 @@ import { useState } from "react";
 import { experiences, projects } from "@/data/experiences";
 import type { Experience } from "@/data/experiences";
 import ExperiencePanel from "@/components/ExperiencePanel";
+import HeroBubbles from "@/components/HeroBubbles";
 
 const TYPE_LABEL = { cdi: "CDI", stage: "Stage", startup: "Startup", alternance: "Alternance" };
 
@@ -17,11 +18,9 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className="relative overflow-hidden flex flex-col justify-center min-h-screen px-6 md:px-16 lg:px-24">
 
-        {/* Animated background orbs */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="hero-orb-1 absolute top-1/4 left-1/5 w-[500px] h-[500px] rounded-full" style={{ background: "radial-gradient(circle, #6366f1, transparent 70%)" }} />
-          <div className="hero-orb-2 absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full" style={{ background: "radial-gradient(circle, #0ea5e9, transparent 70%)" }} />
-          <div className="hero-orb-3 absolute top-1/2 right-1/3 w-[300px] h-[300px] rounded-full" style={{ background: "radial-gradient(circle, #8b5cf6, transparent 70%)" }} />
+        {/* Bubble physics background */}
+        <div className="absolute inset-0 pointer-events-none">
+          <HeroBubbles />
         </div>
 
         <div className="relative max-w-5xl flex flex-col md:flex-row items-center md:items-start gap-10">
@@ -41,7 +40,7 @@ export default function Home() {
             <span style={{ color: "#6366f1" }}>Domecq</span>
           </h1>
           <p className="text-lg md:text-xl font-medium max-w-xl mb-8" style={{ color: "rgba(255,255,255,0.55)" }}>
-            Ingénieur, Développeur, coordinateur de projets IT / AI.
+            Ingénieur, Développeur, Entrepreneur, coordinateur de projets IT / AI.
           </p>
           <div className="flex flex-wrap gap-3 mb-12">
             {["ECE Paris", "Softel Communications", "Copratik"].map((tag) => (
