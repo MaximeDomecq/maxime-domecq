@@ -17,48 +17,37 @@ const INFO_BOXES: { icon: string; label: string; value: string; detail: InfoPane
       sections: [
         {
           flag: "🇫🇷", heading: "Français", level: "Langue maternelle",
-          text: "Langue maternelle.",
+          text: "Langue maternelle, pratiquée au quotidien à l'oral comme à l'écrit dans tous les contextes professionnels et personnels.",
           tags: [],
         },
         {
           flag: "🇬🇧", heading: "Anglais", level: "C1 — TOEIC",
-          text: "Travail à 100% en anglais chez Softel, entreprise américaine, en environnement international. Lecture de loisir et d'actualité en anglais au quotidien.",
-          tags: ["TOEIC validé C1", "Professionnel", "Lecture quotidienne"],
+          text: "Langue de travail à 100 % chez Softel, entreprise américaine opérant dans des environnements internationaux. Rédaction, réunions, documentation technique : tout se fait en anglais. TOEIC validé niveau C1. Presse, podcasts et lectures de loisir également consommés en anglais au quotidien.",
+          tags: ["TOEIC C1 validé", "Usage professionnel quotidien", "Environnement international"],
         },
         {
-          flag: "🇪🇸", heading: "Espagnol", level: "C1",
-          text: "Pratique scolaire depuis l'âge de 10 ans. Échange et correspondant en classe de seconde. 6 mois de vie à Barcelone pendant mon école d'ingénieur. Langage courant, séries et médias consommés en VO espagnole.",
-          tags: ["Depuis 10 ans", "6 mois à Barcelone", "Médias en VO"],
+          flag: "🇪🇸", heading: "Espagnol", level: "C1 courant",
+          text: "Une langue apprise depuis l'âge de 10 ans, enrichie d'un programme d'échange et de correspondance scolaire dès la seconde. Le tournant : six mois de vie à Barcelone lors de mon année à l'UPC, une immersion totale qui a ancré l'espagnol comme une vraie langue de vie. Séries, actualités et conversations du quotidien en VO espagnole.",
+          tags: ["Pratique depuis 10 ans", "6 mois à Barcelone", "Médias & loisirs en VO"],
         },
         {
           flag: "🇨🇳", heading: "Chinois", level: "Initiation",
-          text: "Découverte de la culture chinoise et initiation aux principes de la langue pendant 1 semestre à l'école d'ingénieur.",
-          tags: ["1 semestre", "Culture & langue"],
+          text: "Découverte de la langue et de la culture mandarine pendant un semestre dédié à l'école d'ingénieur. Une ouverture culturelle qui a nourri un intérêt durable pour la Chine, son histoire et ses traditions.",
+          tags: ["1 semestre", "Initiation linguistique & culturelle"],
         },
         {
           flag: "🇩🇪", heading: "Allemand", level: "En apprentissage",
-          text: "Apprentissage en autodidacte depuis octobre 2025 via des applications et documentation en ligne.",
-          tags: ["Autodidacte", "Depuis oct. 2025"],
+          text: "Apprentissage autonome initié en octobre 2025, via des applications mobiles et des ressources en ligne. Une démarche volontaire et progressive, qui reflète le goût pour les nouvelles cultures et l'envie d'élargir son répertoire linguistique.",
+          tags: ["Autodidacte", "Depuis octobre 2025"],
         },
       ],
     },
   },
   {
-    icon: "✈️", label: "Mobilité", value: "Barcelona, Bulgarie",
+    icon: "✈️", label: "Mobilité", value: "18 pays visités",
     detail: {
-      icon: "✈️", label: "Mobilité internationale",
-      sections: [
-        {
-          flag: "🇪🇸", heading: "Barcelona", level: "6 mois",
-          text: "Semestre d'études à l'Universitat Politècnica de Catalunya (UPC — Barcelona Tech) dans le cadre de mon école d'ingénieur ECE Paris.",
-          tags: ["UPC Barcelona Tech", "Échange académique", "2024"],
-        },
-        {
-          flag: "🇧🇬", heading: "Bulgarie", level: "Semestre",
-          text: "Semestre d'études à l'Angel Kanchev University of Ruse en Bulgarie, dans le cadre d'un échange international.",
-          tags: ["Angel Kanchev University", "Échange académique"],
-        },
-      ],
+      icon: "✈️", label: "Voyages & mobilité",
+      mapMode: true,
     },
   },
   {
