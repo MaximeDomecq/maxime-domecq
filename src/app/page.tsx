@@ -6,16 +6,136 @@ import type { Experience } from "@/data/experiences";
 import ExperiencePanel from "@/components/ExperiencePanel";
 import HeroBubbles from "@/components/HeroBubbles";
 import NavBar from "@/components/NavBar";
+import InfoPanel from "@/components/InfoPanel";
+import type { InfoPanelData } from "@/components/InfoPanel";
+
+const INFO_BOXES: { icon: string; label: string; value: string; detail: InfoPanelData }[] = [
+  {
+    icon: "🌍", label: "Langues", value: "FR · EN · ES",
+    detail: {
+      icon: "🌍", label: "Langues",
+      sections: [
+        {
+          flag: "🇫🇷", heading: "Français", level: "Langue maternelle",
+          text: "Langue maternelle.",
+          tags: [],
+        },
+        {
+          flag: "🇬🇧", heading: "Anglais", level: "C1 — TOEIC",
+          text: "Travail à 100% en anglais chez Softel, entreprise américaine, en environnement international. Lecture de loisir et d'actualité en anglais au quotidien.",
+          tags: ["TOEIC validé C1", "Professionnel", "Lecture quotidienne"],
+        },
+        {
+          flag: "🇪🇸", heading: "Espagnol", level: "C1",
+          text: "Pratique scolaire depuis l'âge de 10 ans. Échange et correspondant en classe de seconde. 6 mois de vie à Barcelone pendant mon école d'ingénieur. Langage courant, séries et médias consommés en VO espagnole.",
+          tags: ["Depuis 10 ans", "6 mois à Barcelone", "Médias en VO"],
+        },
+        {
+          flag: "🇨🇳", heading: "Chinois", level: "Initiation",
+          text: "Découverte de la culture chinoise et initiation aux principes de la langue pendant 1 semestre à l'école d'ingénieur.",
+          tags: ["1 semestre", "Culture & langue"],
+        },
+        {
+          flag: "🇩🇪", heading: "Allemand", level: "En apprentissage",
+          text: "Apprentissage en autodidacte depuis octobre 2025 via des applications et documentation en ligne.",
+          tags: ["Autodidacte", "Depuis oct. 2025"],
+        },
+      ],
+    },
+  },
+  {
+    icon: "✈️", label: "Mobilité", value: "Barcelona, Bulgarie",
+    detail: {
+      icon: "✈️", label: "Mobilité internationale",
+      sections: [
+        {
+          flag: "🇪🇸", heading: "Barcelona", level: "6 mois",
+          text: "Semestre d'études à l'Universitat Politècnica de Catalunya (UPC — Barcelona Tech) dans le cadre de mon école d'ingénieur ECE Paris.",
+          tags: ["UPC Barcelona Tech", "Échange académique", "2024"],
+        },
+        {
+          flag: "🇧🇬", heading: "Bulgarie", level: "Semestre",
+          text: "Semestre d'études à l'Angel Kanchev University of Ruse en Bulgarie, dans le cadre d'un échange international.",
+          tags: ["Angel Kanchev University", "Échange académique"],
+        },
+      ],
+    },
+  },
+  {
+    icon: "⚽", label: "Sport", value: "Football, Triathlon",
+    detail: {
+      icon: "⚽", label: "Sport",
+      sections: [
+        {
+          flag: "⚽", heading: "Football",
+          text: "Pratique depuis l'enfance, en club pendant de nombreuses années. Le football reste un vrai fil rouge, entre compétition et convivialité.",
+          tags: ["Pratique club", "Depuis l'enfance"],
+        },
+        {
+          flag: "🏊", heading: "Triathlon",
+          text: "Discipline complète alliant natation, vélo et course à pied. Goût pour les défis d'endurance et la rigueur de l'entraînement multisports.",
+          tags: ["Natation", "Vélo", "Course à pied"],
+        },
+      ],
+    },
+  },
+  {
+    icon: "✈️", label: "Aéronautique", value: "Brevet BIA",
+    detail: {
+      icon: "✈️", label: "Aéronautique",
+      sections: [
+        {
+          heading: "Brevet d'Initiation Aéronautique (BIA)",
+          text: "Formation théorique couvrant la météorologie, la mécanique du vol, la navigation aérienne, la réglementation et l'histoire de l'aéronautique. Une passion pour le ciel, au sol comme en altitude.",
+          tags: ["Météorologie", "Mécanique du vol", "Navigation", "Réglementation"],
+        },
+      ],
+    },
+  },
+  {
+    icon: "🏫", label: "Tutorat", value: "Professeur de maths",
+    detail: {
+      icon: "🏫", label: "Tutorat",
+      sections: [
+        {
+          heading: "Professeur particulier de mathématiques",
+          text: "Accompagnement d'élèves de lycée et de classe préparatoire en mathématiques. Pédagogie, patience et capacité à vulgariser des concepts complexes — des qualités transposables à la coordination de projets.",
+          tags: ["Lycée", "Prépa", "Pédagogie"],
+        },
+      ],
+    },
+  },
+  {
+    icon: "🚀", label: "Entrepreneur", value: "Station F, PEPITE",
+    detail: {
+      icon: "🚀", label: "Entrepreneuriat",
+      sections: [
+        {
+          heading: "Station F",
+          text: "Intégration du plus grand campus de startups au monde à Paris, dans le cadre du développement de Copratik. Accès à un réseau d'entrepreneurs, mentors et investisseurs.",
+          tags: ["Paris", "Startup campus", "Réseau"],
+        },
+        {
+          heading: "PEPITE",
+          text: "Programme national d'Entrepreneuriat Étudiant, qui accompagne les étudiants dans la création et le développement de leur projet entrepreneurial.",
+          tags: ["Entrepreneuriat étudiant", "Accompagnement", "ECE Paris"],
+        },
+      ],
+    },
+  },
+];
 
 const TYPE_LABEL = { cdi: "CDI", stage: "Stage", startup: "Startup", alternance: "Alternance" };
 
 export default function Home() {
   const [selected, setSelected] = useState<Experience | null>(null);
+  const [selectedInfo, setSelectedInfo] = useState<InfoPanelData | null>(null);
 
   return (
     <div style={{ background: "#0a0a0f", minHeight: "100vh", color: "#e2e8f0" }}>
       <NavBar />
       <ExperiencePanel experience={selected} onClose={() => setSelected(null)} />
+      <InfoPanel data={selectedInfo} onClose={() => setSelectedInfo(null)} />
 
       {/* ── HERO ── */}
       <section id="presentation" className="relative overflow-hidden flex flex-col justify-center min-h-screen px-6 md:px-16 lg:px-24 pt-14">
@@ -123,19 +243,20 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4 content-between">
-            {[
-              { icon: "🌍", label: "Langues", value: "FR · EN · ES" },
-              { icon: "✈️", label: "Mobilité", value: "Barcelona, Bulgarie" },
-              { icon: "⚽", label: "Sport", value: "Football, Triathlon" },
-              { icon: "✈️", label: "Aéronautique", value: "Brevet BIA" },
-              { icon: "🏫", label: "Tutorat", value: "Professeur de maths" },
-              { icon: "🚀", label: "Entrepreneur", value: "Station F, PEPITE" },
-            ].map(({ icon, label, value }) => (
-              <div key={label} className="rounded-2xl p-6 flex flex-col justify-center" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+            {INFO_BOXES.map(({ icon, label, value, detail }) => (
+              <button
+                key={label}
+                onClick={() => setSelectedInfo(detail)}
+                className="rounded-2xl p-6 flex flex-col justify-center text-left transition-all duration-200 group hover:scale-[1.02] active:scale-[0.98]"
+                style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(99,102,241,0.08)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(99,102,241,0.25)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.04)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.07)"; }}
+              >
                 <div className="text-2xl mb-2">{icon}</div>
                 <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "rgba(255,255,255,0.3)" }}>{label}</div>
                 <div className="text-sm font-semibold text-white">{value}</div>
-              </div>
+                <div className="text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: "#a5b4fc" }}>En savoir plus →</div>
+              </button>
             ))}
           </div>
         </div>
