@@ -187,6 +187,14 @@ export default function Home() {
               📞 06 15 77 64 14
             </a>
             <a
+              href="/cv-maxime-domecq.pdf"
+              download="CV-Maxime-Domecq.pdf"
+              className="px-6 py-3 rounded-xl font-black text-sm transition-all hover:opacity-80 flex items-center gap-2"
+              style={{ background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.8)", border: "1px solid rgba(255,255,255,0.1)" }}
+            >
+              ↓ Télécharger le CV
+            </a>
+            <a
               href="#parcours"
               className="px-6 py-3 rounded-xl font-black text-sm transition-all hover:opacity-80"
               style={{ background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.8)", border: "1px solid rgba(255,255,255,0.1)" }}
@@ -470,6 +478,14 @@ export default function Home() {
             Ouvert aux opportunités, collaborations et échanges.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
+            <a
+              href="/cv-maxime-domecq.pdf"
+              download="CV-Maxime-Domecq.pdf"
+              className="px-8 py-3.5 rounded-xl font-black text-sm transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
+              style={{ background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.85)", border: "1px solid rgba(255,255,255,0.15)" }}
+            >
+              ↓ Télécharger le CV
+            </a>
             <a
               href="mailto:maxime.domecq@outlook.fr"
               className="px-8 py-3.5 rounded-xl font-black text-sm transition-all hover:scale-105 active:scale-95"
