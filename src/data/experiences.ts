@@ -80,23 +80,24 @@ export const experiences: Experience[] = [
   {
     id: "copratik",
     company: "Copratik",
-    role: "Fondateur & CEO",
+    role: "Co-fondateur & Directeur Général",
     period: "2023",
     location: "Paris — Île-de-France",
     type: "startup",
     color: "#22c55e",
     icon: "⚽",
     companyDescription:
-      "Copratik est une start-up à impact positif que j'ai créée et développée. Son concept : organiser des animations sportives solidaires pour fédérer des équipes en entreprise tout en soutenant des associations. Un projet qui mêle sport, solidarité et cohésion — soutenu par la Région Île-de-France et Station F.",
+      "Copratik est une start-up à impact créée en 2023 autour d'un concept simple et fédérateur : organiser des animations sportives solidaires en entreprise. Chaque événement crée de la cohésion d'équipe tout en reversant une part des bénéfices à des associations partenaires. Le projet a été soutenu par la Région Île-de-France, incubé à Station F et accompagné par le programme national PEPITE.",
     mission:
-      "Création de A à Z d'une start-up à impact : développement du concept, prospection commerciale, organisation des événements, gestion de l'équipe et communication. Obtention du statut Étudiant-Entrepreneur en 2023, accompagné par le programme PEPITE et incubé à Station F.",
+      "En tant que co-fondateur et Directeur Général, j'ai piloté l'entreprise de sa conception à ses premières ventes : structuration du modèle économique, développement de l'offre commerciale, prospection et acquisition clients, management de l'équipe, organisation des événements sur le terrain et déploiement de la stratégie de communication. Une expérience fondatrice, portée de bout en bout.",
     highlights: [
-      "Statut Étudiant-Entrepreneur (PEPITE) acquis en 2023",
-      "Soutenu par la Région Île-de-France et Station F",
-      "Développement du concept, de l'offre et des premiers clients",
-      "Gestion complète : budget, communication, opérationnel",
+      "Co-fondation et direction générale, de l'idée aux premières ventes",
+      "Statut Étudiant-Entrepreneur (PEPITE) obtenu en 2023",
+      "Soutien de la Région Île-de-France, incubation à Station F",
+      "Structuration de l'offre, acquisition des premiers clients",
+      "Gestion 360° : stratégie, finances, communication, opérations terrain",
     ],
-    skills: ["Entrepreneuriat", "Leadership", "Marketing", "Gestion budgétaire", "Communication"],
+    skills: ["Entrepreneuriat", "Leadership", "Développement commercial", "Gestion budgétaire", "Communication"],
   },
   {
     id: "axa",
