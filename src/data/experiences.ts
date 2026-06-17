@@ -21,7 +21,7 @@ export const experiences: Experience[] = [
     period: "Sept. 2025 — Aujourd'hui",
     location: "Paris, France",
     type: "cdi",
-    color: "#6366f1",
+    color: "#3b82f6",
     icon: "🛰️",
     companyDescription:
       "Softel Communications est un intégrateur de solutions de communication d'entreprise, spécialisé dans les technologies NICE (CXone, Copilot). L'entreprise accompagne de grands comptes internationaux dans la transformation de leurs centres de contact et de leur infrastructure IT.",
@@ -170,13 +170,45 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "idlogism",
+    name: "ID Logism — Refonte web",
+    description: "Refonte du site corporate d'une société de cybersécurité",
+    longDescription:
+      "Refonte complète du site web d'ID Logism, société spécialisée en cybersécurité et gestion d'identité numérique. Modernisation de l'identité visuelle, restructuration de l'architecture de l'information et amélioration de l'expérience utilisateur pour mettre en valeur les offres de sécurité.",
+    stack: ["HTML/CSS", "JavaScript", "Design UX/UI"],
+    color: "#ef4444",
+    icon: "🔐",
+    highlights: [
+      "Refonte complète de l'identité visuelle",
+      "Restructuration de l'architecture de l'information",
+      "Optimisation UX et parcours de navigation",
+      "Mise en valeur des offres cybersécurité & identité numérique",
+    ],
+  },
+  {
+    id: "materiauxdelagny",
+    name: "Matériaux de Lagny — Refonte web",
+    description: "Refonte du site d'une entreprise de matériaux de construction",
+    longDescription:
+      "Refonte du site web de Matériaux de Lagny, entreprise locale de vente de matériaux de construction. Modernisation de la présence en ligne, amélioration de l'ergonomie et mise en valeur du catalogue produits pour faciliter la prise de contact.",
+    stack: ["HTML/CSS", "JavaScript", "Design UX/UI"],
+    color: "#84cc16",
+    icon: "🏗️",
+    highlights: [
+      "Modernisation complète de la présence en ligne",
+      "Refonte ergonomique et responsive design",
+      "Mise en valeur du catalogue de produits",
+      "Amélioration du tunnel de contact et devis",
+    ],
+  },
+  {
     id: "copratik-tech",
     name: "Copratik — Digital",
     description: "Présence digitale et outils de la start-up",
     longDescription:
       "Développement de la présence digitale de Copratik : site vitrine, landing pages de prospection et outils de gestion des événements solidaires. Premier projet full-stack géré en totale autonomie, de la conception UX au déploiement.",
     stack: ["JavaScript", "HTML/CSS", "Design UX/UI", "Vercel"],
-    color: "#a855f7",
+    color: "#f97316",
     icon: "🌐",
     link: "https://copratik.fr",
     highlights: [

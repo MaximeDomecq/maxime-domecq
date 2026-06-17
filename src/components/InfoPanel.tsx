@@ -75,7 +75,7 @@ export default function InfoPanel({ data, onClose }: Props) {
                       <div>
                         <span className="font-black text-white">{s.heading}</span>
                         {s.level && (
-                          <span className="ml-2 text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(99,102,241,0.2)", color: "#a5b4fc" }}>
+                          <span className="ml-2 text-xs font-bold px-2 py-0.5 rounded-full" style={{ background: "rgba(59,130,246,0.2)", color: "#93c5fd" }}>
                             {s.level}
                           </span>
                         )}

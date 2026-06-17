@@ -51,7 +51,7 @@ export default function NavBar() {
         {/* Logo + disponible badge */}
         <a href="#presentation" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
           <span className="text-sm font-black text-white tracking-tight">
-            MD<span style={{ color: "#6366f1" }}>.</span>
+            MD<span style={{ color: "#3b82f6" }}>.</span>
           </span>
           <span
             className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold px-2.5 py-1 rounded-full"
@@ -74,7 +74,7 @@ export default function NavBar() {
                   className="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200"
                   style={{
                     color:      isActive ? "#ffffff" : "rgba(255,255,255,0.45)",
-                    background: isActive ? "rgba(99,102,241,0.15)" : "transparent",
+                    background: isActive ? "rgba(59,130,246,0.15)" : "transparent",
                   }}
                 >
                   {label}
@@ -98,7 +98,7 @@ export default function NavBar() {
           <a
             href="mailto:maxime.domecq@outlook.fr?subject=Prise de contact&body=Bonjour Maxime,"
             className="text-xs font-bold px-3 py-1.5 rounded-lg transition-all hover:opacity-80"
-            style={{ background: "rgba(99,102,241,0.2)", color: "#a5b4fc", border: "1px solid rgba(99,102,241,0.2)" }}
+            style={{ background: "rgba(59,130,246,0.2)", color: "#93c5fd", border: "1px solid rgba(59,130,246,0.2)" }}
           >
             Contact
           </a>

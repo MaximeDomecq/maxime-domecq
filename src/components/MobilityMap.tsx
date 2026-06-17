@@ -80,12 +80,12 @@ export default function MobilityMap() {
                     geography={geo}
                     onMouseEnter={() => { if (name) setTooltip(name); }}
                     onMouseLeave={() => setTooltip(null)}
-                    fill={name ? "#6366f1" : "rgba(255,255,255,0.07)"}
+                    fill={name ? "#3b82f6" : "rgba(255,255,255,0.07)"}
                     stroke="rgba(0,0,0,0.35)"
                     strokeWidth={0.4}
                     style={{
                       default: { outline: "none", transition: "fill 0.15s" },
-                      hover: { outline: "none", fill: name ? "#818cf8" : "rgba(255,255,255,0.13)" },
+                      hover: { outline: "none", fill: name ? "#60a5fa" : "rgba(255,255,255,0.13)" },
                       pressed: { outline: "none" },
                     }}
                   />

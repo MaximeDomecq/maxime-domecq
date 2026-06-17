@@ -26,43 +26,36 @@ const GITHUB_SVG = (
 
 const INFO_BOXES: { icon: string; label: string; value: string; detail: InfoPanelData }[] = [
   {
-    icon: "🌍", label: "Langues", value: "FR · EN · ES · DE",
+    icon: "🌍", label: "Langues", value: "FR · EN · ES · ZH · DE",
     detail: {
       icon: "🌍", label: "Langues",
       sections: [
         {
           flag: "🇫🇷", heading: "Français", level: "Langue maternelle",
           text: "Langue maternelle, pratiquée au quotidien à l'oral comme à l'écrit dans tous les contextes professionnels et personnels.",
-          tags: [],
+          tags: ["Langue maternelle"],
         },
         {
           flag: "🇬🇧", heading: "Anglais", level: "C1 — TOEIC",
           text: "Langue de travail à 100 % chez Softel, entreprise américaine opérant dans des environnements internationaux. Rédaction, réunions, documentation technique : tout se fait en anglais. TOEIC validé niveau C1. Presse, podcasts et lectures de loisir également consommés en anglais au quotidien.",
-          tags: ["TOEIC C1 validé", "Usage professionnel quotidien", "Environnement international"],
+          tags: ["C1 validé (TOEIC)", "Usage professionnel quotidien", "Environnement international"],
         },
         {
-          flag: "🇪🇸", heading: "Espagnol", level: "C1 courant",
-          text: "Une langue apprise depuis l'âge de 10 ans, enrichie d'un programme d'échange et de correspondance scolaire dès la seconde. Le tournant : six mois de vie à Barcelone lors de mon année à l'UPC, une immersion totale qui a ancré l'espagnol comme une vraie langue de vie. Séries, actualités et conversations du quotidien en VO espagnole.",
-          tags: ["Pratique depuis 10 ans", "6 mois à Barcelone", "Médias & loisirs en VO"],
+          flag: "🇪🇸", heading: "Espagnol", level: "C1 — Courant",
+          text: "Une langue apprise depuis l'âge de 10 ans, enrichie d'un programme d'échange dès la seconde. Le tournant : six mois de vie à Barcelone lors de mon année à l'UPC, une immersion totale qui a ancré l'espagnol comme une vraie langue de vie. Séries, actualités et conversations du quotidien en VO espagnole.",
+          tags: ["C1 courant", "6 mois à Barcelone (UPC)", "Pratique depuis 10 ans"],
         },
         {
-          flag: "🇨🇳", heading: "Chinois", level: "Initiation",
-          text: "Découverte de la langue et de la culture mandarine pendant un semestre dédié à l'école d'ingénieur. Une ouverture culturelle qui a nourri un intérêt durable pour la Chine, son histoire et ses traditions.",
-          tags: ["1 semestre", "Initiation linguistique & culturelle"],
+          flag: "🇩🇪", heading: "Allemand", level: "A2 — En progression",
+          text: "Apprentissage initié en octobre 2025, progressant activement via des applications mobiles et des ressources en ligne. Niveau A2 atteint avec une pratique quotidienne et une progression régulière.",
+          tags: ["A2 atteint", "Autodidacte", "Depuis octobre 2025"],
         },
         {
-          flag: "🇩🇪", heading: "Allemand", level: "En apprentissage",
-          text: "Apprentissage autonome initié en octobre 2025, via des applications mobiles et des ressources en ligne. Une démarche volontaire et progressive, qui reflète le goût pour les nouvelles cultures et l'envie d'élargir son répertoire linguistique.",
-          tags: ["Autodidacte", "Depuis octobre 2025"],
+          flag: "🇨🇳", heading: "Chinois (Mandarin)", level: "A1 — Notions",
+          text: "Découverte de la langue et de la culture mandarine pendant un semestre à l'école d'ingénieur. Niveau A1 acquis, avec une base en conversation simple et une ouverture culturelle profonde sur la Chine, son histoire et ses traditions.",
+          tags: ["A1 — Notions", "1 semestre", "École d'ingénieur"],
         },
       ],
-    },
-  },
-  {
-    icon: "✈️", label: "Mobilité", value: "18 pays visités",
-    detail: {
-      icon: "✈️", label: "Voyages & mobilité",
-      mapMode: true,
     },
   },
   {
@@ -133,8 +126,8 @@ const TYPE_LABEL = { cdi: "CDI", stage: "Stage", startup: "Startup", alternance:
 
 const STATS = [
   { value: "3+", label: "ans d'expérience", detail: "Pro depuis 2022" },
-  { value: "5", label: "langues pratiquées", detail: "FR · EN · ES · 中文 · DE" },
-  { value: "18", label: "pays visités", detail: "4 continents" },
+  { value: "5", label: "langues pratiquées", detail: "FR · EN · ES · ZH · DE" },
+  { value: "5", label: "expériences pro", detail: "AXA · Qorum · Copratik · Stellantis · Softel" },
   { value: "4", label: "certifications", detail: "NCIE · Copilot · Python · UX" },
 ];
 
@@ -142,7 +135,7 @@ const SKILLS = [
   {
     title: "Coordination & Gestion de Projet",
     icon: "📋",
-    color: "#6366f1",
+    color: "#3b82f6",
     items: [
       "Pilotage de roadmap & livrables",
       "Méthode Agile / Scrum",
@@ -155,7 +148,7 @@ const SKILLS = [
   {
     title: "IA & Nouvelles Technologies",
     icon: "🤖",
-    color: "#a855f7",
+    color: "#0ea5e9",
     items: [
       "NICE Copilot — Certifié",
       "Machine Learning (Datascientest)",
@@ -168,7 +161,7 @@ const SKILLS = [
   {
     title: "Développement Web & Logiciel",
     icon: "💻",
-    color: "#0ea5e9",
+    color: "#06b6d4",
     items: [
       "Next.js / React (TypeScript)",
       "JavaScript · HTML & CSS",
@@ -228,25 +221,25 @@ export default function Home() {
           <div className="flex-shrink-0">
             <div
               className="w-32 h-32 md:w-44 md:h-44 rounded-3xl overflow-hidden"
-              style={{ border: "2px solid rgba(99,102,241,0.35)", boxShadow: "0 0 48px rgba(99,102,241,0.2)" }}
+              style={{ border: "2px solid rgba(59,130,246,0.35)", boxShadow: "0 0 48px rgba(59,130,246,0.2)" }}
             >
               <img src="/photo.jpg" alt="Maxime Domecq" className="w-full h-full object-cover" />
             </div>
           </div>
 
           <div className="flex-1">
-            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: "#6366f1" }}>
+            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: "#3b82f6" }}>
               Bonjour, je suis
             </p>
             <h1 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tight mb-4">
               Maxime<br />
-              <span style={{ color: "#6366f1" }}>Domecq</span>
+              <span style={{ color: "#3b82f6" }}>Domecq</span>
             </h1>
             <p className="text-xl md:text-2xl font-black text-white mb-3 tracking-tight">
               Ingénieur · Développeur · Entrepreneur
             </p>
             <p className="text-base md:text-lg max-w-xl mb-8 leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>
-              Profil hybride technique et coordination — je conçois, développe et pilote des projets IT & IA de bout en bout.
+              Profil hybride technique et coordination — je conçois, développe et pilote des projets IT &amp; IA de bout en bout.
             </p>
 
             {/* Company tags */}
@@ -262,7 +255,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs font-semibold px-3 py-1.5 rounded-full transition-all hover:opacity-70"
-                  style={{ background: "rgba(99,102,241,0.15)", color: "#a5b4fc", border: "1px solid rgba(99,102,241,0.25)" }}
+                  style={{ background: "rgba(59,130,246,0.15)", color: "#93c5fd", border: "1px solid rgba(59,130,246,0.25)" }}
                 >
                   {label}
                 </a>
@@ -274,7 +267,7 @@ export default function Home() {
               <a
                 href="mailto:maxime.domecq@outlook.fr?subject=Prise de contact&body=Bonjour Maxime,"
                 className="px-6 py-3 rounded-xl font-black text-sm transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
-                style={{ background: "#6366f1", color: "white", boxShadow: "0 0 28px rgba(99,102,241,0.4)" }}
+                style={{ background: "#3b82f6", color: "white", boxShadow: "0 0 28px rgba(59,130,246,0.4)" }}
               >
                 ✉️ Me contacter
               </a>
@@ -316,11 +309,18 @@ export default function Home() {
 
       {/* ── STATS STRIP ── */}
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0" style={{ "--tw-divide-opacity": 1, borderColor: "rgba(255,255,255,0.05)" } as React.CSSProperties}>
-          {STATS.map(({ value, label, detail }) => (
-            <div key={label} className="py-8 px-6 text-center" style={{ background: "#0a0a0f" }}>
+        <div className="grid grid-cols-2 md:grid-cols-4" style={{ background: "#0a0a0f" }}>
+          {STATS.map(({ value, label, detail }, i) => (
+            <div
+              key={label}
+              className="py-8 px-6 text-center"
+              style={{
+                borderRight: i < 3 ? "1px solid rgba(255,255,255,0.05)" : "none",
+                borderBottom: i < 2 ? "1px solid rgba(255,255,255,0.05)" : "none",
+              }}
+            >
               <div className="text-3xl md:text-4xl font-black text-white mb-1">{value}</div>
-              <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "#6366f1" }}>{label}</div>
+              <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "#3b82f6" }}>{label}</div>
               <div className="text-xs" style={{ color: "rgba(255,255,255,0.3)" }}>{detail}</div>
             </div>
           ))}
@@ -345,15 +345,17 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            {INFO_BOXES.map(({ icon, label, value, detail }) => (
+            {INFO_BOXES.map(({ icon, label, value, detail }, idx) => (
               <button
                 key={label}
                 onClick={() => setSelectedInfo(detail)}
-                className="rounded-2xl p-5 flex flex-col justify-center text-left transition-all duration-200 group hover:scale-[1.02] active:scale-[0.98]"
+                className={`rounded-2xl p-5 flex flex-col justify-center text-left transition-all duration-200 group hover:scale-[1.02] active:scale-[0.98]${
+                  idx === INFO_BOXES.length - 1 && INFO_BOXES.length % 2 !== 0 ? " col-span-2" : ""
+                }`}
                 style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLElement).style.background = "rgba(99,102,241,0.08)";
-                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(99,102,241,0.25)";
+                  (e.currentTarget as HTMLElement).style.background = "rgba(59,130,246,0.08)";
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(59,130,246,0.25)";
                 }}
                 onMouseLeave={e => {
                   (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.04)";
@@ -363,7 +365,7 @@ export default function Home() {
                 <div className="text-2xl mb-2">{icon}</div>
                 <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "rgba(255,255,255,0.3)" }}>{label}</div>
                 <div className="text-sm font-semibold text-white">{value}</div>
-                <div className="text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: "#a5b4fc" }}>En savoir plus →</div>
+                <div className="text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: "#93c5fd" }}>En savoir plus →</div>
               </button>
             ))}
           </div>
@@ -384,7 +386,7 @@ export default function Home() {
           <div className="relative">
             <div
               className="absolute left-6 top-0 bottom-0 w-px hidden md:block"
-              style={{ background: "linear-gradient(to bottom, rgba(99,102,241,0.5), rgba(99,102,241,0.05))" }}
+              style={{ background: "linear-gradient(to bottom, rgba(59,130,246,0.5), rgba(59,130,246,0.05))" }}
             />
 
             <div className="flex flex-col gap-3">
@@ -393,10 +395,7 @@ export default function Home() {
                   key={exp.id}
                   onClick={() => setSelected(exp)}
                   className="group relative text-left w-full rounded-2xl p-5 md:pl-16 transition-all duration-200 hover:scale-[1.01] active:scale-[0.99]"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.07)",
-                  }}
+                  style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}
                   onMouseEnter={e => {
                     (e.currentTarget as HTMLElement).style.background = `${exp.color}10`;
                     (e.currentTarget as HTMLElement).style.borderColor = `${exp.color}30`;
@@ -406,7 +405,6 @@ export default function Home() {
                     (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.07)";
                   }}
                 >
-                  {/* Timeline dot */}
                   <div
                     className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full hidden md:flex items-center justify-center"
                     style={{ background: exp.color, boxShadow: `0 0 12px ${exp.color}60` }}
@@ -563,7 +561,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Certifications */}
           <div className="rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
             <h3 className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "rgba(255,255,255,0.3)" }}>Certifications</h3>
             <div className="flex flex-wrap gap-2">
@@ -571,7 +568,7 @@ export default function Home() {
                 <span
                   key={cert}
                   className="text-sm font-semibold px-4 py-2 rounded-full"
-                  style={{ background: "rgba(99,102,241,0.12)", color: "#a5b4fc", border: "1px solid rgba(99,102,241,0.2)" }}
+                  style={{ background: "rgba(59,130,246,0.12)", color: "#93c5fd", border: "1px solid rgba(59,130,246,0.2)" }}
                 >
                   ✓ {cert}
                 </span>
@@ -590,24 +587,21 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-black text-white mb-12">Formation</h2>
 
           <div className="flex flex-col gap-4">
-            {/* ECE Paris */}
             <div className="rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
               <div className="flex items-start gap-4">
                 <div className="text-3xl">🎓</div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 flex-wrap mb-1">
                     <h3 className="font-black text-white">ECE Paris — École Centrale d&apos;Électronique</h3>
-                    <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: "rgba(99,102,241,0.15)", color: "#a5b4fc" }}>2019 – 2025</span>
+                    <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: "rgba(59,130,246,0.15)", color: "#93c5fd" }}>2019 – 2025</span>
                   </div>
                   <p className="text-sm mb-4" style={{ color: "rgba(255,255,255,0.5)" }}>
                     Diplôme d&apos;Ingénieur · Majeure Product Engineering &amp; Innovation
                   </p>
-
-                  {/* Exchange programs */}
                   <div className="flex flex-col gap-2">
                     <div
                       className="flex items-center gap-3 px-4 py-3 rounded-xl"
-                      style={{ background: "rgba(99,102,241,0.08)", border: "1px solid rgba(99,102,241,0.2)" }}
+                      style={{ background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.2)" }}
                     >
                       <span className="text-xl">🇪🇸</span>
                       <div className="flex-1 min-w-0">
@@ -630,7 +624,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Bac */}
             <div className="rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
               <div className="flex items-start gap-4">
                 <div className="text-3xl">📚</div>
@@ -661,7 +654,6 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-            {/* QR Code */}
             <div className="flex flex-col items-center gap-4 flex-shrink-0">
               <QRCode size={160} />
               <div className="text-center">
@@ -670,19 +662,18 @@ export default function Home() {
               </div>
             </div>
 
-            {/* CTAs */}
             <div className="flex-1 w-full">
               <div className="flex flex-col gap-3">
                 <a
                   href="mailto:maxime.domecq@outlook.fr"
                   className="flex items-center justify-between px-6 py-4 rounded-2xl transition-all hover:scale-[1.01] group"
-                  style={{ background: "#6366f1", boxShadow: "0 0 32px rgba(99,102,241,0.3)" }}
+                  style={{ background: "#3b82f6", boxShadow: "0 0 32px rgba(59,130,246,0.3)" }}
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-xl">✉️</span>
                     <div>
                       <div className="font-black text-white text-sm">Email</div>
-                      <div className="text-xs text-indigo-200">maxime.domecq@outlook.fr</div>
+                      <div className="text-xs text-blue-200">maxime.domecq@outlook.fr</div>
                     </div>
                   </div>
                   <span className="text-white/50 group-hover:translate-x-1 transition-transform">→</span>
@@ -758,7 +749,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer
         className="px-6 py-8 text-center text-xs"
         style={{ color: "rgba(255,255,255,0.15)", borderTop: "1px solid rgba(255,255,255,0.05)" }}
