@@ -170,6 +170,23 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "selio",
+    name: "Sélio — SaaS Analytics & SEO",
+    description: "Plateforme SaaS d'analytics et d'audit SEO multi-sites",
+    longDescription:
+      "Sélio est une plateforme SaaS développée de zéro : tracking des visiteurs sur plusieurs sites, audit SEO automatisé avec export PDF, et vérificateur de positionnement Google & DuckDuckGo. Construite avec Next.js 14 et Supabase.",
+    stack: ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS", "jsPDF"],
+    color: "#14b8a6",
+    icon: "📈",
+    link: "https://github.com/MaximeDomecq/Selio",
+    highlights: [
+      "Tracking visiteurs multi-sites en temps réel",
+      "Audit SEO automatisé avec génération de rapport PDF",
+      "Vérificateur de positionnement Google & DuckDuckGo",
+      "Authentification, dashboard multi-sites par utilisateur",
+    ],
+  },
+  {
     id: "idlogism",
     name: "ID Logism — Refonte web",
     description: "Refonte du site corporate d'une société de cybersécurité",
