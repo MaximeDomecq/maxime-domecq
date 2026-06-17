@@ -125,7 +125,7 @@ const INFO_BOXES: { icon: string; label: string; value: string; detail: InfoPane
 const TYPE_LABEL = { cdi: "CDI", stage: "Stage", startup: "Startup", alternance: "Alternance" };
 
 const STATS = [
-  { value: "3+", label: "ans d'expérience", detail: "Pro depuis 2022" },
+  { value: "1 an", label: "expérience", detail: "CDI depuis sept. 2025" },
   { value: "5", label: "langues pratiquées", detail: "FR · EN · ES · ZH · DE" },
   { value: "5", label: "expériences pro", detail: "AXA · Qorum · Copratik · Stellantis · Softel" },
   { value: "4", label: "certifications", detail: "NCIE · Copilot · Python · UX" },
